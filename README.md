@@ -20,9 +20,14 @@
 
 The newrelic ibm mq monitor allows you to monitor the performance of MQ Objects like channels and queues while also enabling easy alerting.
 
-## Installation
+## Installation and Starting the monitor
 
-1. Unzip the newrelic-ibm-mq-monitor 
+1. Download the zip file from [the latest release](https://github.com/newrelic-experimental/newrelic-ibm-mq-monitor/releases/latest) and unzip to a suitable location on your server.
+2. Update the `APP_HOME` and `MQ_LIB` variables in the appropriate startup script for your operating system (`start.bat` for Windows or `start.sh` for Linux) to point to the appropriate locations:
+   - `APP_HOME`: The directory where you unzipped the monitor.
+   - `MQ_LIB`: The directory where your MQ client libraries are stored. **(Note: These are not included in the monitor distribution.)**
+4. Configure `plugin.json` according to the **Configuration** section below.
+5. Run the appropriate startup script for your operating system (`start.bat` for Windows or `start.sh` for Linux).
 
 ## Configuration
 
@@ -83,8 +88,6 @@ Edit the following block of XML at the end of the logback.xml to change the log 
 ## Metrics and Dashboarding
 All metrics collected by this plugin are reported as events of type "IBMMQSample". 
 
-
-## Starting the monitor 
 
 ## Building
 
