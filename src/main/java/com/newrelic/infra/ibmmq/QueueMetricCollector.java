@@ -44,6 +44,14 @@ public class QueueMetricCollector {
 			PCFMessage inquireQueue = new PCFMessage(CMQCFC.MQCMD_INQUIRE_Q); 
 
 			inquireQueue.addParameter(MQConstants.MQCA_Q_NAME, "*");
+
+			// In cases where large numbers of queues are reported from a slow queue manager, timeouts were occurring on retrieving queue names
+			// Allows for filtering of queue names from the existing queueIgnores list using the addFilterParameter PCFMessage function
+			for (Pattern ignorePattern : agentConfig.queueIgnores) {
+				logger.debug("Adding ignore pattern to filters: " + ignorePattern.toString());
+				inquireQueue.addFilterParameter(MQConstants.MQCA_Q_NAME, MQConstants.MQCFOP_NOT_LIKE, ignorePattern.toString());
+			}
+
 			inquireQueue.addParameter(MQConstants.MQIA_Q_TYPE, MQConstants.MQQT_LOCAL);
 			inquireQueue.addParameter(MQConstants.MQIACF_Q_ATTRS,
 					new int[] { 
