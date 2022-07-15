@@ -1,3 +1,5 @@
+[![Archived header](https://github.com/newrelic/opensource-website/raw/master/src/images/categories/Archived.png)](https://opensource.newrelic.com/oss-category/#archived)
+
 ⚠️ We recommend using  the official New Relic  [integration for IBM MQ](https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/ibmmq-monitoring-integration/) to collect IBM MQ metrics. This integration is no longer being maintained. 
 
 [![New Relic Experimental header](https://github.com/newrelic/opensource-website/raw/master/src/images/categories/Experimental.png)](https://opensource.newrelic.com/oss-category/#new-relic-experimental)
@@ -21,6 +23,10 @@
 # [Warning: This is a Deprecated Repository] New Relic integration for IBM MQ (newrelic-ibm-mq-monitor)
 
 The newrelic ibm mq monitor allows you to monitor the performance of MQ Objects like channels and queues while also enabling easy alerting.
+
+## Archival Notice ##
+As of July 15 2022 we are archiving this experimental integration project for IBM MQ. 
+We recommend using  the official New Relic  [integration for IBM MQ](https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/ibmmq-monitoring-integration/) to collect IBM MQ metrics.
 
 ## Installation and Starting the monitor
 
