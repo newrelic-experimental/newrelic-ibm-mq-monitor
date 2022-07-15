@@ -1,4 +1,4 @@
-⚠️ We recommend using  the official New Relic  [integration for IBM MQ](https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/ibmmq-monitoring-integration/) to collect both SNMP and Network Flows. This integration is no longer being maintained. 
+⚠️ We recommend using  the official New Relic  [integration for IBM MQ](https://docs.newrelic.com/docs/infrastructure/host-integrations/host-integrations-list/ibmmq-monitoring-integration/) to collect IBM MQ metrics. This integration is no longer being maintained. 
 
 [![New Relic Experimental header](https://github.com/newrelic/opensource-website/raw/master/src/images/categories/Experimental.png)](https://opensource.newrelic.com/oss-category/#new-relic-experimental)
 
